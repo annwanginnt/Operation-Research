@@ -1,6 +1,7 @@
 """
 @author: Adam Diamant (2023)
 """
+pip install gurobipy
 
 from gurobipy import GRB
 import gurobipy as gb

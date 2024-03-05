@@ -26,6 +26,8 @@ for i in range(3):
 # Add the demand constraints
 for j in range(3):
     model.addConstr(gb.quicksum(x[i,j] for i in range(3)) <= demand[j], name="Demand Constraint %i" %j)
+    
+# 或者你可以这样model.addConstr(gb.quicksum(x[i,j] for i in range(3)) <= demand[j], for j in range(3))
 
 # Optimally solve the problem
 model.optimize()
@@ -36,5 +38,8 @@ print("Number of Decision Variables: ", model.numVars)
 # Value of the objective function
 print("Total Transportation cost: ", model.objVal)
 
-# Print the decision variables
+# Print the decision variables这里永远 是X
 print(model.printAttr('X'))
+
+# x[0,0].x
+# x[1,0].x

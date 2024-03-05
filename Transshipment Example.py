@@ -53,3 +53,5 @@ print("Total Transportation cost: ", model.objVal)
 
 # Print the decision variables
 print(model.printAttr('X'))
+
+# 
